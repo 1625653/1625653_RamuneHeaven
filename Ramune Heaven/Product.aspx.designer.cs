@@ -10,7 +10,7 @@
 namespace Ramune_Heaven {
     
     
-    public partial class Index {
+    public partial class Product {
         
         /// <summary>
         /// form1 control.
@@ -22,49 +22,13 @@ namespace Ramune_Heaven {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// searchbox control.
+        /// ProductImage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox searchbox;
-        
-        /// <summary>
-        /// searchproduct control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button searchproduct;
-        
-        /// <summary>
-        /// search control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater search;
-        
-        /// <summary>
-        /// SqlDataSource2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource2;
-        
-        /// <summary>
-        /// Repeater1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater Repeater1;
+        protected global::System.Web.UI.WebControls.Image ProductImage;
         
         /// <summary>
         /// SqlDataSource1 control.
@@ -76,21 +40,30 @@ namespace Ramune_Heaven {
         protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
         
         /// <summary>
-        /// Repeater2 control.
+        /// FormView1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater Repeater2;
+        protected global::System.Web.UI.WebControls.FormView FormView1;
         
         /// <summary>
-        /// SqlDataSource3 control.
+        /// Button1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource3;
+        protected global::System.Web.UI.WebControls.Button Button1;
+        
+        /// <summary>
+        /// SqlDataSource2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource2;
     }
 }

@@ -1,42 +1,121 @@
-﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Ramune_Heaven._Default" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Ramune_Heaven.Index" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
+    My Home
+</asp:Content>
 
-<asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
+<asp:Content ID="Content2" ContentPlaceHolderID="Heading1" runat="server">
+</asp:Content>
 
-    <div class="jumbotron">
-        <h1>ASP.NET</h1>
-        <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS, and JavaScript.</p>
-        <p><a href="http://www.asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-    </div>
+<asp:Content ID="Content3" ContentPlaceHolderID="Heading2" runat="server">
+           
+</asp:Content>
 
-    <div class="row">
-        <div class="col-md-4">
-            <h2>Getting started</h2>
-            <p>
-                ASP.NET Web Forms lets you build dynamic websites using a familiar drag-and-drop, event-driven model.
-            A design surface and hundreds of controls and components let you rapidly build sophisticated, powerful UI-driven sites with data access.
-            </p>
-            <p>
-                <a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301948">Learn more &raquo;</a>
-            </p>
+
+<asp:Content ID="Content4" ContentPlaceHolderID="Content" runat="server">
+    
+        <form id="form1" runat="server">
+            
+        <hr><br />
+        <div id="searchbar" style="background:maroon; height:25px; padding-top:2px; padding-bottom:2px; width: 945px;">
+        <div id="box" style="float:right; padding-right:5px;">
+        <asp:TextBox ID="searchbox" runat="server" Width="235px" Height="20px" Style="padding-left:10px; margin-left: 0;"></asp:TextBox>
+        <asp:Button ID="searchproduct" runat="server" OnClick="Button1_Click" Text="Search" Width="81px"  />
         </div>
-        <div class="col-md-4">
-            <h2>Get more libraries</h2>
-            <p>
-                NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.
-            </p>
-            <p>
-                <a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301949">Learn more &raquo;</a>
-            </p>
         </div>
-        <div class="col-md-4">
-            <h2>Web Hosting</h2>
-            <p>
-                You can easily find a web hosting company that offers the right mix of features and price for your applications.
-            </p>
-            <p>
-                <a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301950">Learn more &raquo;</a>
-            </p>
-        </div>
-    </div>
+            
+            
+        <div id="searchname" style="width: 939px">
+        <asp:Repeater ID="search" runat="server" DataSourceID="SqlDataSource2">
+              <HeaderTemplate>
+                 <table><tr>
+                  </HeaderTemplate>
+                   <ItemTemplate>
+                            <td>
+                                <br />
+                                <div class="ProductNameBox">
+                                    <a href="<%#Eval("ProductID","Product.aspx?ProductID={0}") %>"><asp:Image ID="ProductImage"  style="border: 2px solid; margin-right:20px; width:20px; height:15px;"
+                                      ImageUrl='<%#string.Format("Images/ProductImage/{0}.jpg", Eval("ProductID")) %>' runat="server" /></a>
+                                    <a class="ProductName" href="<%#Eval("ProductID","Product.aspx?ProductID={0}") %>"><%#Eval("ProductName") %></a><br />
+                                </div>
+                            </td>
+                     </ItemTemplate>
+                    <FooterTemplate>
+                  </tr></table>
+              </FooterTemplate>
+         </asp:Repeater>
+
+            <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:IdentityConnectionString %>" SelectCommand="SELECT * FROM [Product] WHERE ([ProductName] LIKE '%' + @ProductName + '%')">
+                <SelectParameters>
+                    <asp:QueryStringParameter Name="ProductName" QueryStringField="SearchProduct" Type="String" />
+                </SelectParameters>
+            </asp:SqlDataSource>
+
+        </div>   
+            
+  
+        <br />
+
+        <div class="slideshowbanner">
+            <h1>Explore Ramune Toy Candy Product</h1>
+            <script src="responsiveslides/slideshowbanner.js"></script>
+            <div class="rslides_container " style="padding-top:5px;">
+              <ul class="rslides" id="slider1">
+                <li><asp:Image runat="server" ImageUrl="responsiveslides/b1.jpg"/></li>
+                <li><asp:Image runat="server" ImageUrl="responsiveslides/b2.jpg"/></li>
+                <li><asp:Image runat="server" ImageUrl="responsiveslides/b3.jpg"/></li>
+              </ul>
+            </div>
+          </div>
+                    
+
+        <asp:Repeater ID="Repeater1" runat="server" DataSourceID="SqlDataSource1">
+            <HeaderTemplate><table class="homeProduct"><tr></HeaderTemplate>
+            <ItemTemplate>  
+                <td>          
+                     <br></br><br />
+                    <a href="<%#Eval("ProductID","Product.aspx?ProductID={0}") %>"><asp:Image ID="ProductImage"  style="border: 2px solid; margin-right:20px; width:215px; height:145px;"
+                      ImageUrl='<%#string.Format("Images/ProductImage/{0}.jpg", Eval("ProductID")) %>' runat="server" /></a>
+                    <br />
+                    
+                    <div class="ProductNameBox">
+                        <a class="ProductName" href="<%#Eval("ProductID","Product.aspx?ProductID={0}") %>"><%#Eval("ProductName") %></a><br />
+                        
+                    </div>
+                    <a class="Price">Bnd<%#Eval("Price") %></a><br /><a class="ProductQuantity">Quantity:<%#Eval("ProductQuantity") %></a></td> 
+                   
+                    
+            </ItemTemplate>
+            <FooterTemplate></tr></table></FooterTemplate>
+        </asp:Repeater>
+
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:IdentityConnectionString %>" SelectCommand="SELECT Top 4 * FROM [Product] WHERE ProductQuantity > 1 ORDER BY ProductID DESC"></asp:SqlDataSource>
+         
+             
+        <asp:Repeater ID="Repeater2" runat="server" DataSourceID="SqlDataSource3">
+            <HeaderTemplate><table class="homeProduct"><tr></HeaderTemplate>
+            <ItemTemplate>  
+                <td>          
+                     <br></br><br />
+                    <a href="<%#Eval("ProductID","Product.aspx?ProductID={0}") %>"><asp:Image ID="ProductImage"  style="border: 2px solid; margin-right:20px; width:215px; height:145px;"
+                      ImageUrl='<%#string.Format("Images/ProductImage/{0}.jpg", Eval("ProductID")) %>' runat="server" /></a>
+                    <br />
+                    
+                    <div class="ProductNameBox">
+                        <a class="ProductName" href="<%#Eval("ProductID","Product.aspx?ProductID={0}") %>"><%#Eval("ProductName") %></a><br />
+                        
+                    </div>
+                    <a class="Price">Bnd<%#Eval("Price") %></a><br /><a class="ProductQuantity">Quantity:<%#Eval("ProductQuantity") %></a></td> 
+                    
+            </ItemTemplate>
+            <FooterTemplate></tr></table></FooterTemplate>
+        </asp:Repeater>
+         
+              
+             
+            <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:IdentityConnectionString %>" SelectCommand="SELECT TOP 4 * FROM [Product]"></asp:SqlDataSource>
+         
+              
+             
+       </form>
 
 </asp:Content>

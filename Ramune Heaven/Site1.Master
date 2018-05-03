@@ -1,0 +1,83 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="Ramune_Heaven.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+
+<head runat="server">
+<title>
+    <asp:ContentPlaceHolder ID="title" runat="server">
+
+    </asp:ContentPlaceHolder>
+</title>
+    <link href="css/stylesheet.css" rel="stylesheet" />
+    <link href="responsiveslides/responsiveslides.css" rel="stylesheet" />
+    <script src="responsiveslides/jquery.min.js"></script>
+    <script src="responsiveslides/responsiveslides.min.js"></script>
+
+    <style type="text/css">
+        .auto-style1 {
+            height: 79px;
+            width: 509px;
+        }
+    </style>
+
+</head>
+
+<body runat="server">
+
+<h1>
+    <asp:ContentPlaceHolder ID="Heading1" runat="server">
+
+    </asp:ContentPlaceHolder>
+</h1>
+
+<div class="shell">
+  <!-- Header -->
+  <div id="header">
+    <h1 id="logo"><img src="Images/ProductImage/RamuneLogo.jpg" class="auto-style1" /></h1>
+    <!-- Cart -->
+    <div id="cart"> <a href="#" class="cart-link">Shopping Cart</a>
+      <div class="cl">&nbsp;</div>
+      <span><strong></strong></span> &nbsp;&nbsp; <span><strong></strong></span> </div>
+    <!-- End Cart -->
+    <!-- Navigation -->
+    <div id="navigation">
+      <ul>
+        <li><a href="~/Default.aspx" runat="server">Shop</a></li>
+        <li><a href="~/Contact.aspx" runat="server">Contact</a></li>
+        <li><a href="~/Login.aspx" runat="server">Login</a></li>
+        <li><a href="~/Register.aspx" runat="server">Register</a></li>
+      </ul>
+    </div>
+    <!-- End Navigation -->
+  </div>
+  <!-- End Header -->
+
+
+
+
+<div id="main">
+<h2>
+    <asp:ContentPlaceHolder ID="Heading2" runat="server">
+
+    </asp:ContentPlaceHolder>
+</h2>
+
+<asp:ContentPlaceHolder ID="Content" runat="server">
+
+</asp:ContentPlaceHolder>
+</div>
+
+  <div id="footer">
+    <p class="left"> <a href="Index.aspx">Shop</a> <span>|</span><a href="Register.aspx">Register</a> <span>|</span> <a href="Login.aspx">Login</a> <span>|</span> <a href="Contact.aspx">Contact</a> </p>
+    <p class="right"> &copy; 2018 Ramune Heaven, design by 1625653</p>
+  </div>
+  <!-- End Footer -->
+
+</div>
+<!-- End Shell -->
+
+</body>
+
+</html>

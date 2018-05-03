@@ -10,7 +10,7 @@
 namespace Ramune_Heaven {
     
     
-    public partial class Index {
+    public partial class Register {
         
         /// <summary>
         /// form1 control.
@@ -22,75 +22,57 @@ namespace Ramune_Heaven {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// searchbox control.
+        /// Label1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox searchbox;
+        protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
-        /// searchproduct control.
+        /// txtregEmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button searchproduct;
+        protected global::System.Web.UI.WebControls.TextBox txtregEmail;
         
         /// <summary>
-        /// search control.
+        /// Label2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater search;
+        protected global::System.Web.UI.WebControls.Label Label2;
         
         /// <summary>
-        /// SqlDataSource2 control.
+        /// TxtRegPassword control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource2;
+        protected global::System.Web.UI.WebControls.TextBox TxtRegPassword;
         
         /// <summary>
-        /// Repeater1 control.
+        /// btnReg control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater Repeater1;
+        protected global::System.Web.UI.WebControls.Button btnReg;
         
         /// <summary>
-        /// SqlDataSource1 control.
+        /// litRegisterError control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
-        
-        /// <summary>
-        /// Repeater2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater Repeater2;
-        
-        /// <summary>
-        /// SqlDataSource3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource3;
+        protected global::System.Web.UI.WebControls.Literal litRegisterError;
     }
 }

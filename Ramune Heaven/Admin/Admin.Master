@@ -1,0 +1,75 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="Ramune_Heaven.Admin.Admin" %>
+
+<!DOCTYPE html>
+
+<html>
+
+<head runat="server">
+<title>
+    <asp:ContentPlaceHolder ID="title" runat="server">
+
+    </asp:ContentPlaceHolder>
+</title>
+    <link href="css/stylesheet.css" rel="stylesheet" />
+
+    <style type="text/css">
+        .auto-style2 {
+            width: 586px;
+            height: 71px;
+        }
+    </style>
+
+</head>
+
+<body runat="server">
+
+<h1>
+    <asp:ContentPlaceHolder ID="Heading1" runat="server">
+
+    </asp:ContentPlaceHolder>
+</h1>
+
+<div class="shell">
+  <!-- Header -->
+  <div id="header">
+    <h1 id="logo"><img src="Images/ProductImage/RamuneLogo.jpg" class="auto-style2" /></h1>
+   
+    <!-- Navigation -->
+    <div id="navigation">
+      <ul>
+        <li><a href="~/Default.aspx" runat="server">Ramune Heaven Website</a></li>
+        <li><a href="~/Admin/Add.aspx" runat="server">Add Product</a></li>
+        <li><a href="~/Admin/Lists.aspx" runat="server">List Product</a></li>
+      </ul>
+    </div>
+    <!-- End Navigation -->
+  </div>
+  <!-- End Header -->
+
+
+
+
+<div id="main">
+<h2>
+    <asp:ContentPlaceHolder ID="Heading2" runat="server">
+
+    </asp:ContentPlaceHolder>
+</h2>
+
+<asp:ContentPlaceHolder ID="Content" runat="server">
+
+</asp:ContentPlaceHolder>
+</div>
+
+  <div id="footer">
+    <p class="right"> &copy; 2018 Ramune Heaven, design by 1625653</p>
+  </div>
+  <!-- End Footer -->
+
+</div>
+<!-- End Shell -->
+
+</body>
+
+</html>
+

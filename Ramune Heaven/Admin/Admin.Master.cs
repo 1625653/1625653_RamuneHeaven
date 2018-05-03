@@ -5,18 +5,13 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Ramune_Heaven
+namespace Ramune_Heaven.Admin
 {
-    public partial class Index : System.Web.UI.Page
+    public partial class Admin : System.Web.UI.MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
-        }
-
-        protected void Button1_Click(object sender, EventArgs e)
-        {
-         Response.Redirect("~/default.aspx?SearchProduct=" + searchbox.Text);
         }
     }
 }

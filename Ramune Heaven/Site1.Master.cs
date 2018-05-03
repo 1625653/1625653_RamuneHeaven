@@ -7,16 +7,11 @@ using System.Web.UI.WebControls;
 
 namespace Ramune_Heaven
 {
-    public partial class Index : System.Web.UI.Page
+    public partial class Site1 : System.Web.UI.MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
-        }
-
-        protected void Button1_Click(object sender, EventArgs e)
-        {
-         Response.Redirect("~/default.aspx?SearchProduct=" + searchbox.Text);
         }
     }
 }
